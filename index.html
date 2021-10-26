@@ -5,8 +5,92 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hayden's Portfolio</title>
+    <style>
+        body{
+            background-color: darkslategray;
+        }
+        .wrapper{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: darkgoldenrod;
+            text-transform: uppercase;
+        }
+
+        ul{
+            width: 50%;
+            height: 150px;
+            display: flex;
+            padding: 0;
+            position: relative;
+        }
+
+        li{
+            width: 40px;
+            height: 40px;
+            list-style: none;
+            background-color: slateblue;
+            border-radius: 50%;
+            position: absolute;
+        }
+
+        .ball1{
+            left: 0%;
+            animation: bounceBall1 1s ease infinite;
+        }
+        .ball2{
+            left: 49%;
+            animation: bounceBall2 1s ease 0.3s infinite;
+        }
+        .ball3{
+            left: 93%;
+            animation: bounceBall2 1s ease 0.5s infinite;
+        }
+        @keyframes bounceBall1 {
+            0% {
+                top: 60%;
+            }
+            50%{
+                top: 0;
+            }
+            100%{
+                top: 60%;
+            }
+        }
+        @keyframes bounceBall2 {
+            0% {
+                top: 60%;
+            }
+            50%{
+                top: 0;
+            }
+            100%{
+                top: 60%;
+            }
+        }
+        @keyframes bounceBall3 {
+            0% {
+                top: 60%;
+            }
+            50%{
+                top: 0;
+            }
+            100%{
+                top: 60%;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Portfolio Coming Soon!</h1>
+    <header class="wrapper">
+        <h1>Hayden's Portfolio Under Construction</h1>
+        <ul>
+            <li class="ball1"></li>
+            <li class="ball2"></li>
+            <li class="ball3"></li>
+        </ul>
+        <h2>Coming Soon to a Web Browser Near You!</h2>
+    </header>
 </body>
 </html>
