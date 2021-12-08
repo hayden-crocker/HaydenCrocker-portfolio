@@ -218,7 +218,7 @@ header p{
 
 .recentProjects {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     grid-template-rows: 450px;
     gap: 20px;
 }
@@ -411,4 +411,18 @@ footer p {
     background-color: #413f6c;
     margin: 0;
     padding: 10px;
+}
+
+@media (max-width: 1050px) {
+    .recentProjects {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 450px);
+    }
+}
+
+@media (max-width: 670px) {
+    .wrapper{
+        max-width: 670px;
+        width: 100%;
+    }
 }
