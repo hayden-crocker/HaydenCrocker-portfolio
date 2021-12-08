@@ -4,94 +4,128 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid&family=Poppins:wght@200;400&display=swap" rel="stylesheet">
     <title>Hayden's Portfolio</title>
-    <style>
-        body{
-            background-color: darkslategray;
-        }
-        .wrapper{
-            height: 90vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: darkgoldenrod;
-            text-transform: uppercase;
-        }
-
-        ul{
-            width: 50%;
-            height: 150px;
-            display: flex;
-            padding: 0;
-            position: relative;
-        }
-
-        li{
-            width: 40px;
-            height: 40px;
-            list-style: none;
-            background-color: slateblue;
-            border-radius: 50%;
-            position: absolute;
-        }
-
-        .ball1{
-            left: 0%;
-            animation: bounceBall1 1s ease infinite;
-        }
-        .ball2{
-            left: 49%;
-            animation: bounceBall2 1s ease 0.3s infinite;
-        }
-        .ball3{
-            left: 93%;
-            animation: bounceBall2 1s ease 0.5s infinite;
-        }
-        @keyframes bounceBall1 {
-            0% {
-                top: 60%;
-            }
-            50%{
-                top: 0;
-            }
-            100%{
-                top: 60%;
-            }
-        }
-        @keyframes bounceBall2 {
-            0% {
-                top: 60%;
-            }
-            50%{
-                top: 0;
-            }
-            100%{
-                top: 60%;
-            }
-        }
-        @keyframes bounceBall3 {
-            0% {
-                top: 60%;
-            }
-            50%{
-                top: 0;
-            }
-            100%{
-                top: 60%;
-            }
-        }
-    </style>
 </head>
 <body>
-    <header class="wrapper">
-        <h1>Hayden's Portfolio Under Construction</h1>
-        <ul>
-            <li class="ball1"></li>
-            <li class="ball2"></li>
-            <li class="ball3"></li>
-        </ul>
-        <h2>Coming Soon to a Web Browser Near You!</h2>
+    <nav class="topNav">
+        <div class="navContainer">
+            <a class="logo" href="#">haycrocks</a>
+            <ul>
+                <li>
+                    <a href="#">About</a>
+                </li>
+                <li>
+                    <a href="#">Portfolio</a>
+                </li>
+                <li> 
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <header>
+        <div class="wrapper">
+            <div class="circleOne"></div>
+            <div class="circleTwo"></div>
+            <p>Front End Developer</p>
+            <h1>Hayden Crocker</h1>
+            <div class="triangle"></div>
+            <div class="triangleTwo"></div>
+        </div>
     </header>
+    <main>
+        <section class="about">
+            <div class="wrapper">
+                <div class="aboutText">
+                    <h2>About Me</h2>
+                    <h3>Mission Statement</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, sequi voluptas assumenda, eius maiores, iusto nisi recusandae hic qui accusamus quibusdam? Porro fuga minima, culpa odio id fugit maxime dicta.
+                    Dolores tempora at consectetur minima praesentium laboriosam deserunt nostrum quos perspiciatis illo tempore assumenda, blanditiis eos, commodi odit itaque debitis doloribus animi similique magni atque, natus provident! Temporibus, consequuntur iure.</p>
+                </div>
+                <div class="aboutImage">
+                    <img src="./assets/IMG_6E8AB9B0E440-1 copy.jpeg" alt="A picture of Hayden Crocker">
+                </div>
+            </div>
+        </section>
+        <section class="portfolioPreview">
+            <div class="wrapper">
+                <h2>Portfolio</h2>
+                <div class="recentProjects">
+                    <div class="projectOne">
+                        <p class="projectOneSummary">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum cupiditate laudantium assumenda perspiciatis maiores, ab inventore unde accusamus quo?
+                        </p>
+                        <a href="#">See More</a>
+                    </div>
+                    <div class="projectTwo">
+                        <p class="projectTwoSummary">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum cupiditate laudantium assumenda perspiciatis maiores,
+                        </p>
+                        <a href="#">See More</a>
+                    </div>
+                    <div class="projectThree">
+                        <p class="projectThreeSummary">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum cupiditate laudantium assumenda perspiciatis maiores,
+                            ab inventore unde accusamus quo? Nam aliquid atque neque nobis sed cum provident, soluta perspiciatis sunt quaerat
+                            molestiae reiciendis quos officiis aperiam eaque nisi obcaecati ea. Iure aperiam unde iste reiciendis harum aliquam
+                            voluptatum quo mollitia.
+                        </p>
+                        <a href="#">See More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="skills">
+            <!-- Font Awesome Icons -->
+            <div class="skillsContainer wrapper">
+                <h2>Skills</h2>
+                <div class="skillIcons">
+                    <i class="fab fa-html5"></i>
+                    <i class="fab fa-css3-alt"></i>
+                    <i class="fab fa-js-square"></i>
+                    <i class="fab fa-react"></i>
+                    <i class="fab fa-sass"></i>
+                    <i class="fas fa-database"></i>
+                    <i class="fas fa-terminal"></i>
+                    <i class="fab fa-github-square"></i>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="wrapper">
+            <h2>Contact Me</h2>
+            <a class="logo" href="#">haycrocks</a>
+            <ul class="socials">
+                <li>
+                    <a href="#"><i class="fas fa-envelope"></i></a> 
+                    <a href="#">crocker.hayden@gmail.com</a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/hayden-crocker-63786a188/"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.linkedin.com/in/hayden-crocker-63786a188/">https://www.linkedin.com/in/hayden-crocker</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fab fa-twitter-square"></i></a>
+                    <a href="https://twitter.com/h_crocks">https://twitter.com/h_crocks</a>
+                </li>
+            </ul>
+            <form action="https://formspree.io/f/xbjwjlld" method="POST"">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Name">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Email">
+                <label for="message">Send Message</label>
+                <textarea name="message" id="message" placeholder="Send me a Message!" rows="8"></textarea>
+                <button type="submit">Send Your Message</button>
+            </form>
+        </div>
+        <p>Portfolio done by Hayden Crocker</p>
+    </footer>
+    <script src="https://kit.fontawesome.com/3ef22f007c.js" crossorigin="anonymous"></script>
 </body>
 </html>
