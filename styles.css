@@ -74,6 +74,9 @@ nav a {
     top: 0;
     z-index: 20;
     padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .topNav .fa-bars {
@@ -82,24 +85,24 @@ nav a {
 }
 
 .navContainer{
+    position: relative;
+    width: 50%;
+}
+
+.navContainer ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0;
     width: 90%;
-    margin: 0 auto;
-    position: relative;
+
 }
 
 .logo {
     font-family: 'Londrina Solid', cursive;
     letter-spacing: 4px;
     color: #eeb14c;
-}
-
-.topNav ul{
-    display: flex;
-    justify-content: space-between;
-    width: 40%;
+    padding-left: 20px;
 }
 
 header {
@@ -464,16 +467,20 @@ footer p {
 
 @media (max-width: 1050px) {
 
+    .navContainer {
+        width: 10%;
+    }
+
     .navContainer ul {
         display: none;
         position: absolute;
-        left: 65%;
+        right: 0;
         top: 100%;
         background-color: #413f6c;
         border: solid 2px #d9d9d9;
         padding: 25px;
         margin: 0;
-        width: 40%;
+        width: 200px;
     }
 
     .navContainer ul a {
@@ -485,8 +492,8 @@ footer p {
         display: block;
     }
 
-    .topNav:hover ul,
-    .topNav:focus-within ul{
+    .navContainer:hover ul,
+    .navContainer:focus-within ul{
         display: flex;
         flex-direction: column;
     }
@@ -586,6 +593,15 @@ footer p {
 }
 
 @media (max-width: 510px) {
+    .circleOne,
+    .circleTwo {
+        border: 50px dashed #7898cf;
+    }
+
+    .circleOne{ 
+        left: 10%;
+    }
+
     .skills i {
         font-size: 2.5rem;
     }
