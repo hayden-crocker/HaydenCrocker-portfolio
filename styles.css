@@ -73,11 +73,12 @@ nav a {
     position: sticky;
     top: 0;
     z-index: 20;
+    padding: 10px;
 }
 
 .topNav .fa-bars {
     display: none;
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
 .navContainer{
@@ -200,6 +201,19 @@ header p{
     width: 70%;
 }
 
+.aboutText a {
+    display: block;
+    color: #eeb14c;
+    background-color: #413f6c;
+    margin-top: 20px;
+    padding: 10px;
+    border: 2px solid #7898cf;
+    border-radius: 10px;
+    width: 40%;
+    text-align: center;
+    letter-spacing: 3px;
+}
+
 .aboutImage {
     width: 30%;
     margin-left: 50px;
@@ -255,6 +269,7 @@ h4 {
     align-items: center;
     padding: 10px;
     width: 100%;
+    padding-bottom: 30px;
 }
 
 .summary:hover,
@@ -291,13 +306,14 @@ h4 {
 .summary a {
     background-color: #413f6c;
     color: #eeb14c;
-    width: 30%;
+    width: 40%;
     border: 2px solid #7898cf;
     border-radius: 10px;
     font-size: 1.2rem;
     text-align: center;
     align-self: flex-end;
     padding: 10px;
+    letter-spacing: 3px;
 }
 
 .summary .techStack{
@@ -487,6 +503,10 @@ footer p {
         border: 80px dashed #7898cf;
     }
 
+    .projectOne {
+        background-position: center;
+    }
+
     .about .wrapper{
         flex-direction: column;
     }
@@ -494,6 +514,15 @@ footer p {
     .aboutText {
         width: 100%;
         order: 1;
+    }
+
+    .aboutText p {
+        font-size: 1rem;
+    }
+
+    .aboutText a {
+        font-size: 1rem;
+        width: 50%;
     }
 
     .aboutImage{
@@ -523,9 +552,18 @@ footer p {
 }
 
 @media (max-width: 670px) {
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
     .wrapper{
         max-width: 670px;
-        width: 90%;
+        width: 95%;
     }
 
     .summary i {
