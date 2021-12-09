@@ -74,7 +74,7 @@ nav a {
     color: #eeb14c;
     position: sticky;
     top: 0;
-    z-index: 1;
+    z-index: 20;
 }
 
 .navContainer{
@@ -129,11 +129,11 @@ header p{
     display: inline-block;
     height: 100px;
     width: 100px;
-    border: 100px dashed #7898cf;
+    border: 150px dashed #7898cf;
     border-radius: 50%;
     position: fixed;
-    right: 15%;
-    top: 50%;
+    right: 10%;
+    top: 40%;
     z-index: -1;
     animation: spinTwo 30s infinite linear ;
 }
@@ -198,16 +198,17 @@ header p{
     margin-left: 50px;
 }
 
+/* PORTFOLIO SECTION */
 .portfolioPreview{
     background-color: #d9d9d9;
 }
 
-.portfolioPreview h2 {
+.portfolioPreview h2,
+h4 {
     text-align: right;
 }
 
 .portfolioPreview .wrapper{
-    width: 70%;
     padding: 0 50px 50px 50px;
     color: #413f6c;
 }
@@ -218,8 +219,7 @@ header p{
 
 .recentProjects {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    grid-template-rows: 450px;
+    grid-template-rows: repeat(3, 450px);
     gap: 20px;
 }
 
@@ -232,39 +232,29 @@ header p{
     height: 100%;
 }
 
-.recentProjects p {
-    opacity: 0;
-    padding: 25px;
+.summary p {
     margin: 0;
+    width: 70%;
+    align-self: center;
     color: #eeb14c;
-    height: 100%;
+    font-size: 1rem;
+    z-index: -10;
 }
 
-.recentProjects a {
-    opacity: 0;
+.recentProjects a,
+.recentProjects h3 {
     width: 100%;
     text-align: center;
     padding: 10px;
     color: #7898cf;
-    z-index: 1;
+    /* z-index: 1; */
 }
 
-.recentProjects div:hover p,
-.recentProjects div:focus p,
-.recentProjects div:hover a,
-.recentProjects div:focus a{
-    opacity: 1;
-    background-color: rgba(0, 0, 0, 1);
-    animation: fadein .3s ease;
-}
-
-@keyframes fadein {
-    from {
-        opacity: 0;
-    }
-    to{
-        opacity: 1;
-    }
+.summary h3 {
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    z-index: -10;
 }
 
 .projectOne {
@@ -282,6 +272,49 @@ header p{
     background-image: url(./assets/smoothLanding.png);
     width: 100%;
 }
+
+.summary {
+    display: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.summary a {
+    background-color: #413f6c;
+    color: #eeb14c;
+    width: 30%;
+    border: 2px solid #7898cf;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    z-index: -10;
+}
+
+/* .recentProjects div:hover .summary,
+.recentProjects div:focus .summary */
+.summary {
+    background-color: rgba(0, 0, 0, 0);
+    transition: 1s;
+    /* opacity: 1; */
+}
+
+.summary .techStack{
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    z-index: -10;
+    font-size: 3rem;
+}
+
+.summary .codeLinks {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    z-index: -10;
+}
+
+/* SKILLS SECTION */
 
 .skills{
     flex-direction: column;
@@ -388,7 +421,7 @@ textarea{
 button{
     margin: 0 auto;
     padding: 10px;
-    width: 40%;
+    width: 300px;
     background-color: #413f6c;
     border: 2px solid #7898cf;
     border-radius: 10px;
