@@ -79,12 +79,12 @@ nav a {
     align-items: center;
 }
 
-.topNav .fa-bars {
+.navContainer .fa-bars {
     display: none;
     font-size: 2rem;
 }
 
-.navContainer{
+.navContainer {
     position: relative;
     width: 50%;
 }
@@ -95,7 +95,6 @@ nav a {
     align-items: center;
     padding: 0;
     width: 90%;
-
 }
 
 .logo {
@@ -476,8 +475,8 @@ footer p {
     .navContainer ul {
         display: none;
         position: absolute;
-        right: 0;
-        top: 100%;
+        right: -10px;
+        top: 104%;
         background-color: #413f6c;
         border: solid 2px #d9d9d9;
         padding: 25px;
@@ -490,23 +489,27 @@ footer p {
         border-bottom: #d9d9d9 2px solid;
     }
 
-    .topNav .fa-bars {
+    .navContainer .fa-bars {
         display: block;
     }
 
+    .navContainer .fa-bars:focus {
+        border: 1px dotted #eeb14c;
+    }
+
     .navContainer:hover ul,
-    .navContainer:focus-within ul{
+    .navContainer:focus-within ul {
         display: flex;
         flex-direction: column;
     }
 
-    .circleOne{
+    .circleOne {
         right: 50%;
         top: 10%;
         border: 80px dashed #7898cf;
     }
 
-    .circleTwo{
+    .circleTwo {
         right: 20%;
         top: 65%;
         border: 80px dashed #7898cf;
