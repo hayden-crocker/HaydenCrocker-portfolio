@@ -58,7 +58,7 @@ section{
 
 .wrapper {
     max-width: 1400px;
-    width: 70%;
+    width: 80%;
     margin: 0 auto;
 }
 
@@ -220,9 +220,11 @@ header p{
 .aboutImage {
     width: 30%;
     margin-left: 50px;
+    min-width: 300px;
 }
 
 /* PORTFOLIO SECTION */
+
 .portfolioPreview{
     background-color: #d9d9d9;
 }
@@ -369,7 +371,7 @@ footer .wrapper{
     grid-template-rows: .3r .2fr 1fr;
     padding: 50px 0 50px 0;
     gap: 30px;
-    width: 65%;
+    width: 73%;
 }
 
 footer h2{ 
@@ -533,7 +535,7 @@ footer p {
     }
 
     .aboutImage{
-        width: 70%;
+        width: 300px;
         margin: 0 auto;
     }
 
