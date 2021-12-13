@@ -132,34 +132,12 @@ header p{
     animation: spinOne 30s infinite linear ;
 }
 
-.circleTwo {
-    display: inline-block;
-    height: 100px;
-    width: 100px;
-    border: 150px dashed #7898cf;
-    border-radius: 50%;
-    position: fixed;
-    right: 10%;
-    top: 40%;
-    z-index: -1;
-    animation: spinTwo 30s infinite linear ;
-}
-
 @keyframes spinOne {
     from{ 
         transform: rotate(0deg);
     }
     to {
         transform: rotate(360deg);
-    }
-}
-
-@keyframes spinTwo {
-    from{ 
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(-360deg);
     }
 }
 
@@ -200,7 +178,7 @@ header p{
 }
 
 .aboutText {
-    width: 70%;
+    /* width: 70%; */
 }
 
 .aboutText a {
@@ -239,57 +217,61 @@ h4 {
 }
 
 .recentProjects {
-    display: grid;
-    grid-template-rows: repeat(3, 450px);
-    gap: 20px;
+    text-align: center;
+    position: relative;
 }
 
-.recentProjects div{
-    height: 300px;
-    background-size: cover;
-    height: 100%;
+.recentProjects img{
+    height: 200px;
+    width: 300px;
+    margin: 0 auto;
+    box-shadow: 5px 5px 2px rgba(0, 0, 0, .5);
 }
 
-.projectOne {
-    background-image: url(./assets/thatGenre.png);
-    background-size: contain;
-    width: 100%;
+.recentProjects a {
+    color: #eeb14c;
+    border: 2px solid #413f6c;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, .5);
+    padding: 5px;
+    cursor: pointer;
+    transition: 0.6s ease;
 }
 
-.projectTwo {
-    background-image: url(./assets/creationComplex.png);
-    width: 100%;
+.project {
+    position: none;
 }
 
-.projectThree {
-    background-image: url(./assets/smoothLanding.png);
-    width: 100%;
+.next,
+.prev {
+    position: absolute;
+    top: 50%;
+    font-size: 2rem;
+}
+
+.next:hover, .prev:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #d9d9d9;
+}
+
+.next{
+    right: -40px;
+}
+
+.prev {
+    left: -40px;
 }
 
 .summary {
-    opacity: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px;
+    margin-top: 20px;
+    padding: 30px;
     width: 100%;
     padding-bottom: 30px;
-}
-
-.summary:hover,
-.summary:focus-within {
-    animation: fadeIn 1s ease-out;
-    opacity: 1;
-    background-color: rgba(0, 0, 0, 1);
-}
-
-@keyframes fadeIn {
-    from{
-        opacity: 0;
-    }
-    to{
-        opacity: 1;
-    }
+    background-color: #413f6c;
+    box-shadow: 5px 5px 2px rgba(0, 0, 0, .5);
 }
 
 .summary h3 {
@@ -301,7 +283,8 @@ h4 {
 
 .summary p {
     margin: 0;
-    width: 70%;
+    margin-top: 10px;
+    /* width: 70%; */
     align-self: center;
     color: #eeb14c;
     font-size: 1rem;
@@ -332,6 +315,7 @@ h4 {
     width: 90%;
     display: flex;
     flex-direction: row;
+    margin-top: 20px;
     justify-content: space-between;
 }
 
@@ -466,6 +450,13 @@ footer p {
     padding: 10px;
 }
 
+@media (min-width: 1050px) {
+    .recentProjects img {
+        width: 600px;
+        height: 500px;
+    }
+}
+
 @media (max-width: 1050px) {
 
     .navContainer {
@@ -477,6 +468,10 @@ footer p {
         position: absolute;
         right: -10px;
         top: 104%;
+    }
+
+    .navContainer ul.showMenu {
+        display: block;
         background-color: #413f6c;
         border: solid 2px #d9d9d9;
         padding: 25px;
@@ -491,16 +486,11 @@ footer p {
 
     .navContainer .fa-bars {
         display: block;
+        cursor: pointer;
     }
 
     .navContainer .fa-bars:focus {
         border: 1px dotted #eeb14c;
-    }
-
-    .navContainer:hover ul,
-    .navContainer:focus-within ul {
-        display: flex;
-        flex-direction: column;
     }
 
     .circleOne {
@@ -509,15 +499,6 @@ footer p {
         border: 80px dashed #7898cf;
     }
 
-    .circleTwo {
-        right: 20%;
-        top: 65%;
-        border: 80px dashed #7898cf;
-    }
-
-    .projectOne {
-        background-position: center;
-    }
 
     .about .wrapper{
         flex-direction: column;
@@ -598,12 +579,8 @@ footer p {
 }
 
 @media (max-width: 510px) {
-    .circleOne,
-    .circleTwo {
+    .circleOne{
         border: 50px dashed #7898cf;
-    }
-
-    .circleOne{ 
         left: 10%;
     }
 
