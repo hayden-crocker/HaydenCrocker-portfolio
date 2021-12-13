@@ -14,8 +14,8 @@
 </head>
 <body>
     <nav class="topNav">
-        <a class="logo" href="#" tabindex="1">haycrocks</a>
-        <div class="navContainer" tabindex="2">
+        <a class="logo" href="#">haycrocks</a>
+        <div class="navContainer">
             <i class="fas fa-bars"></i>
             <ul>
                 <li>
@@ -33,7 +33,6 @@
     <header>
         <div class="wrapper">
             <div class="circleOne"></div>
-            <div class="circleTwo"></div>
             <p class="animate__animated animate__bounceInLeft">Front End Developer</p>
             <h1 class="animate__animated animate__bounceInLeft">Hayden Crocker</h1>
             <div class="triangle"></div>
@@ -57,11 +56,11 @@
         <section class="portfolioPreview" id="portfolio">
             <div class="wrapper">
                 <h2>Portfolio</h2>
-                <h4>Hover over the picture for more info!</h4>
                 <div class="recentProjects">
-                    <div class="projectOne">
+                    <div class="project">
+                        <h3>That Genre</h3>
+                        <img src="./assets/thatGenre.png" alt="that genre webpage">
                         <div class="summary">
-                            <h3>That Genre</h3>
                             <div class="techStack">
                                 <i class="fab fa-html5"></i>
                                 <i class="fab fa-js-square"></i>
@@ -76,9 +75,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="projectTwo">
+                    <div class="project">
+                        <h3>Creation Complex</h3>
+                        <img src="./assets/creationComplex.png" alt="creation complex web page">
                         <div class="summary">
-                            <h3>Creation Complex</h3>
                             <div class="techStack">
                                 <i class="fab fa-react"></i>
                                 <i class="fab fa-css3-alt"></i>
@@ -93,9 +93,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="projectThree">
+                    <div class="project">
+                        <h3>Smooth Landing</h3>
+                        <img src="./assets/smoothLanding.png" alt="smooth langing webpage">
                         <div class="summary">
-                            <h3>Smooth Landing</h3>
                             <div class="techStack">
                                 <i class="fab fa-react"></i>
                                 <i class="fab fa-css3-alt"></i>
@@ -110,6 +111,8 @@
                             </div>
                         </div>
                     </div>
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
                 </div>
             </div>
         </section>
