@@ -175,10 +175,11 @@ header p{
     align-items: flex-start;
     padding: 50px;
     color: #413f6c;
+    transition: .6s ease;
 }
 
-.aboutText {
-    /* width: 70%; */
+.aboutText p {
+    transition: .6s ease;
 }
 
 .aboutText a {
@@ -198,6 +199,7 @@ header p{
     width: 30%;
     margin-left: 50px;
     min-width: 300px;
+    transition: .6s ease;
 }
 
 /* PORTFOLIO SECTION */
@@ -214,6 +216,7 @@ h4 {
 .portfolioPreview .wrapper{
     padding: 0 50px 50px 50px;
     color: #413f6c;
+    transition: .6s ease;
 }
 
 .recentProjects {
@@ -226,6 +229,7 @@ h4 {
     width: 300px;
     margin: 0 auto;
     box-shadow: 5px 5px 2px rgba(0, 0, 0, .5);
+    transition: .6s ease;
 }
 
 .recentProjects a {
@@ -268,7 +272,7 @@ h4 {
     align-items: center;
     margin-top: 20px;
     padding: 30px;
-    width: 100%;
+    height: 300px;
     padding-bottom: 30px;
     background-color: #413f6c;
     box-shadow: 5px 5px 2px rgba(0, 0, 0, .5);
@@ -284,10 +288,9 @@ h4 {
 .summary p {
     margin: 0;
     margin-top: 10px;
-    /* width: 70%; */
     align-self: center;
     color: #eeb14c;
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 
 .summary a {
@@ -309,6 +312,10 @@ h4 {
     flex-direction: row;
     justify-content: space-between;
     font-size: 3rem;
+}
+
+.techStack i {
+    transition: .6s ease;
 }
 
 .summary .codeLinks {
@@ -342,6 +349,10 @@ h4 {
     grid-template-rows: 1fr 1fr;
     gap: 40px;
     width: 100%;
+}
+
+.skillIcons i {
+    transition: .6s ease;
 }
 
 footer {
@@ -452,7 +463,7 @@ footer p {
 
 @media (min-width: 1050px) {
     .recentProjects img {
-        width: 600px;
+        width: 700px;
         height: 500px;
     }
 }
@@ -499,7 +510,6 @@ footer p {
         border: 80px dashed #7898cf;
     }
 
-
     .about .wrapper{
         flex-direction: column;
     }
@@ -521,6 +531,10 @@ footer p {
     .aboutImage{
         width: 300px;
         margin: 0 auto;
+    }
+
+    .summary p {
+        font-size: 1rem;
     }
 
     footer .wrapper {
@@ -556,7 +570,11 @@ footer p {
 
     .wrapper{
         max-width: 670px;
-        width: 95%;
+        width: 90%;
+    }
+
+    .about .wrapper {
+        padding: 30px 0 30px 0;
     }
 
     .summary i {
@@ -564,7 +582,8 @@ footer p {
     }
 
     .summary p {
-        width: 95%;
+        width: 100%;
+        font-size: .9rem;
     }
     
     .summary a {
@@ -582,6 +601,23 @@ footer p {
     .circleOne{
         border: 50px dashed #7898cf;
         left: 10%;
+    }
+
+    .portfolioPreview .wrapper {
+        padding: 0 0 30px 0;
+    }
+
+    .next,
+    .prev {
+        top: 30%;
+    }
+
+    .next {
+        right: 1%;
+    }
+
+    .prev {
+        left: 1%;
     }
 
     .skills i {
